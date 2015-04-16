@@ -13,6 +13,7 @@ complete <- function(directory, id = 1:332) {
   ## where 'id' is the monitor ID number and 'nobs' is the
   ## number of complete cases
   
+  orgCwd <- getwd()
   setwd(directory)
   filesList <- list.files(pattern = "[.]csv$")
   
@@ -31,6 +32,8 @@ complete <- function(directory, id = 1:332) {
     d <- rbind(d, c(fileIndex, numOfCompleteRows))
   }
   
+  setwd(orgCwd)
+
   # Setting data frame columns' names
   names(d) <- c("id", "nobs")
   return(d)

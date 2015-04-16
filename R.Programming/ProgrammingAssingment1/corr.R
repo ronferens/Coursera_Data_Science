@@ -8,12 +8,13 @@ corr <- function(directory, threshold = 0) {
   ## nitrate and sulfate; the default is 0
   
   ## Return a numeric vector of correlations
-  setwd(directory)
-  filesList <- list.files(pattern = "[.]csv$")
-  completeCases = complete(directory, 1:length(filesList))
+  orgCwd <- getwd()
   
+  completeCases = complete(directory)
   numOfCompleteCasees = completeCases[[2]]
   
+  setwd(directory)
+  filesList <- list.files(pattern = "[.]csv$")
   res <- rep(NA, length=length(filesList))
   
   # Reading the files corresponding to the given IDs list
@@ -31,8 +32,9 @@ corr <- function(directory, threshold = 0) {
   res<-res[!is.na(res)]
   
   if(length(res) == 0) {
-    res = 0;
+    res <- vector(mode="numeric", length=0);
   }
   
+  setwd(orgCwd)
   return(res)
 }
