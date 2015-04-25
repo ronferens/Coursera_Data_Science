@@ -46,7 +46,7 @@ While running the run_analysis.R script the following steps will occur:
 1. The raw data set will be downloaded from this link - https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 2. A new folder named "Data" will be created, in case it is no exist.  
 3. The downloaded zipped raw data set will be extract to the "Data" folder.  
-4. Once unzipped the raw data will be processed as followed:
+4. Once unzipped the raw data will be processed as followed:  
   * After joining the subjects' list and activities' list, both training and testing data sets will be binned
   * Only features that measure mean and standard deviation will be extracted from the raw data
   * The list of activities will be renamed using meaningful labels (instead of numbers)
