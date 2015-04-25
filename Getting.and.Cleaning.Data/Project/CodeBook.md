@@ -5,23 +5,39 @@
 This processed data set is based on the raw data collected by UCI Machine Learning Repository - **Human Activity Recognition Using Smartphones Data Set**.
 
 ###Feature List###
-*The processed data consist of the following features:
+The processed data consist of the following features:
 *tBodyAcc-XYZ
+
 *tGravityAcc-XYZ
+
 *tBodyAccJerk-XYZ
+
 *tBodyGyro-XYZ
+
 *tBodyGyroJerk-XYZ
+
 *tBodyAccMag
+
 *tGravityAccMag
+
 *tBodyAccJerkMag
+
 *tBodyGyroMag
+
 *tBodyGyroJerkMag
+
 *fBodyAcc-XYZ
+
 *fBodyAccJerk-XYZ
+
 *fBodyGyro-XYZ
+
 *fBodyAccMag
+
 *fBodyAccJerkMag
+
 *fBodyGyroMag
+
 *fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
