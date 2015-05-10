@@ -1,0 +1,1 @@
+data <- read.table("C:/Users/rferens/Git/datasciencecoursera/Getting.and.Cleaning.Data/b5a87540ead411e4944b95ef28f47fd3.txt")
