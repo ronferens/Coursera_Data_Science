@@ -1,4 +1,6 @@
 # Reproducible Research: Peer Assessment 1
+Ron Ferens  
+Saturday, July 18, 2015  
 
 ##Data  
 The variables included in this dataset are:
