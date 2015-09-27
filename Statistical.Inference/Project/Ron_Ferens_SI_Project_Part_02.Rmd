@@ -2,7 +2,7 @@
 title: "Statistical Inference - Tooth Growth"
 author: "Ron Ferens"
 date: "September 26, 2015"
-output: html_document
+output: pdf_document
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -73,7 +73,7 @@ t.test(len ~ dose, paired = FALSE, var.equal = FALSE, data = Tooth.dose_05_to_20
 t.test(len ~ dose, paired = FALSE, var.equal = FALSE, data = Tooth.dose_10_to_20)
 ```
 
-Based on the result of the three confedence interval testings, we can conclude that increase in the dosage level does affect the tooth length. We can determine since in all three tests, the *p-value* is smaller than the significance level $0.05$. This mean that we can reject the *null hypothesis* that increacing the dose does not increase tooth length.
+Based on the result of the three confedence interval tests, we can conclude that increase in the dosage level does affect the tooth length. This conclusion is based on the fact that the confidence interval is below zero, for all three tests. This suggest that increacing the dose does increase tooth length.
 
 ###Confidence Interval Testing for Supplement Type
 In this section we will run cofidence interval test for the two different supplement types - orange juice or ascorbic acid.
@@ -82,7 +82,7 @@ In this section we will run cofidence interval test for the two different supple
 t.test(len ~ supp, paired = FALSE, var.equal = FALSE, data = ToothGrowth)
 ```
 
-For the confidence interval testing for *Supplement Type*, we got *p-value* which is **not** smaller than the significance level $0.05$. This mean that we can not reject the *null hypothesis*. Hence, we **can not** determine that a differnet type of supplement does indeed increase tooth length.
+The test result for  *Supplement Type* indicates that the confidence interval  **does** include zero. This means we **can not** determine that a differnet type of supplement does indeed increase tooth length.
 
 ###Confidence Interval Testing for Supplement Type in respect to Dosage Level
 In this third and final test, we will investige, whether a different supllement type have an affect of the pigs tooth length in each one of the dosage levels.
@@ -97,7 +97,7 @@ t.test(len ~ supp, paired = FALSE, var.equal = FALSE, data = Tooth.dose_10)
 t.test(len ~ supp, paired = FALSE, var.equal = FALSE, data = Tooth.dose_20)
 ```
 
-We can see that the latest confidence interval testing confirm our initial conclusions we got in the exploratory data analysis phase. For the two lower dosage levels (0.5 and 1.0 mg) we got *p-value* with is smaller than the significance level $0.05$. However, for dosage level of 2.0 mg, we got *p-value* which is **not** smaller than the significance level $0.05$. This means, that differnet suplement type have an effect on the pigs' tooth lenght only when lower dosage levels are used.
+We can see that the latest confidence interval testing confirm our initial conclusions we got in the exploratory data analysis phase. For the two lower dosage levels (0.5 and 1.0 mg) we got confidence intervals that are above zero. However, for dosage level of 2.0 mg, the confidence interval does include zero. This means, that differnet suplement type have an effect on the pigs' tooth lenght only when lower dosage levels are used.
 
 #Conclusions
 1. Dosage levels of Vitamin C have more significant effect on pigs' tooth length in respect to the suplement type. The higher the dosgae level the longer the tooth grows.  
